@@ -9,7 +9,7 @@ ww.dat<- subset(ww.dat,Location!='WWTP')
 
 ########################################## Fischer's test for each location
 ## The following codes will generate a result for Fischer's test for each location. The results for all the locations then will be consolidated using the codes (L218-227)
-# CR
+# CR - One of the residence halls (RH1)
 ww.dat.CR<-subset(ww.dat,Location=='CR')
 
 new.dat.matrix<-cbind(case.dat$CR_Weekly_Avr_Cases,ww.dat.CR$N2_Weekly_Avr)
@@ -50,7 +50,7 @@ tab.cont.dat.CR <- matrix(c(sum(Quad.2),sum(Quad.1),sum(Quad.3),sum(Quad.4)),nco
 dat.test.CR <- fisher.test(tab.cont.dat.CR,alternative='greater')
 dat.test.CR
 
-# YA
+# YA - One of the residence halls (RH2)
 ww.dat.YA<-subset(ww.dat,Location=='YA')
 
 new.dat.matrix<-cbind(case.dat$YA_Weekly_Avr_Cases,ww.dat.YA$N2_Weekly_Avr)
@@ -91,7 +91,7 @@ tab.cont.dat.YA <- matrix(c(sum(Quad.2),sum(Quad.1),sum(Quad.3),sum(Quad.4)),nco
 dat.test.YA <- fisher.test(tab.cont.dat.YA,alternative='greater')
 dat.test.YA
 
-# UCE
+# UCE - University eastern catchment (NE)
 ww.dat.UCE<-subset(ww.dat,Location=='UCE')
 
 new.dat.matrix<-cbind(case.dat$UCE_Weekly_Avr_Cases,ww.dat.UCE$N2_Weekly_Avr)
@@ -132,7 +132,7 @@ tab.cont.dat.UCE <- matrix(c(sum(Quad.2),sum(Quad.1),sum(Quad.3),sum(Quad.4)),nc
 dat.test.UCE <- fisher.test(tab.cont.dat.UCE,alternative='greater')
 dat.test.UCE
 
-# UCS
+# UCS - University southern catchment (SO)
 ww.dat.UCS<-subset(ww.dat,Location=='UCS')
 
 new.dat.matrix<-cbind(case.dat$UCS_Weekly_Avr_Cases,ww.dat.UCS$N2_Weekly_Avr)
@@ -173,7 +173,7 @@ tab.cont.dat.UCS <- matrix(c(sum(Quad.2),sum(Quad.1),sum(Quad.3),sum(Quad.4)),nc
 dat.test.UCS <- fisher.test(tab.cont.dat.UCS,alternative='greater')
 dat.test.UCS
 
-# UCW
+# UCW - University western catchment (NW)
 ww.dat.UCW<-subset(ww.dat,Location=='UCW')
 
 new.dat.matrix<-cbind(case.dat$UCW_Weekly_Avr_Cases,ww.dat.UCW$N2_Weekly_Avr)
